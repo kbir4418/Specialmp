@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Special Lady ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(135deg,#ff9ac8,#ffd6e8,#d8b4fe);
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+padding:20px;
+
+}
+
+.container{
+
+width:800px;
+
+padding:45px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.4);
+
+box-shadow:0 8px 35px rgba(0,0,0,.12);
+
+text-align:center;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.page{
+display:none;
+animation:fade .6s;
+}
+
+.active{
+display:block;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+h1{
+
+font-family:Great Vibes;
+
+font-size:58px;
+
+color:#ff2b77;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#444;
+
+margin-bottom:25px;
+
+}
+
+button{
+
+padding:14px 32px;
+
+border:none;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(
+
+45deg,
+
+#ff4d88,
+
+#ff74b5);
+
+color:white;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+margin-top:15px;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 10px 20px
+
+rgba(255,0,120,.25);
+
+}
+
+.calendar{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(7,1fr);
+
+gap:12px;
+
+margin-top:30px;
+
+}
+
+.date{
+
+padding:15px;
+
+background:white;
+
+border-radius:12px;
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.date:hover{
+
+background:#ff4f8f;
+
+color:white;
+
+transform:scale(1.06);
+
+}
+
+.options{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+margin-top:25px;
+
+}
+
+.choice{
+
+width:160px;
+
+height:160px;
+
+border-radius:20px;
+
+background:white;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:26px;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:
+
+0 5px 20px
+
+rgba(0,0,0,.08);
+
+}
+
+.choice:hover{
+
+transform:scale(1.07);
+
+}
+
+textarea{
+
+width:100%;
+
+height:120px;
+
+padding:15px;
+
+margin-top:25px;
+
+border-radius:15px;
+
+border:1px solid pink;
+
+resize:none;
+
+font-size:16px;
+
+}
+
+.result{
+
+background:#fff4fa;
+
+padding:25px;
+
+border-radius:20px;
+
+margin-top:20px;
+
+}
+
+.result h2{
+
+color:#ff2d75;
+
+margin:15px 0;
+
+}
+
+.heart{
+
+position:absolute;
+
+width:20px;
+
+height:20px;
+
+background:#ff5b95;
+
+transform:rotate(45deg);
+
+opacity:.4;
+
+animation:float 10s linear infinite;
+
+}
+
+.heart:before,
+.heart:after{
+
+content:"";
+
+position:absolute;
+
+width:20px;
+
+height:20px;
+
+background:#ff5b95;
+
+border-radius:50%;
+
+}
+
+.heart:before{
+
+top:-10px;
+
+}
+
+.heart:after{
+
+left:-10px;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:
+
+translateY(100vh)
+
+rotate(45deg);
+
+}
+
+100%{
+
+transform:
+
+translateY(-150px)
+
+rotate(45deg);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="heart" style="left:10%;animation-duration:9s"></div>
+<div class="heart" style="left:30%;animation-duration:11s"></div>
+<div class="heart" style="left:50%;animation-duration:8s"></div>
+<div class="heart" style="left:70%;animation-duration:12s"></div>
+<div class="heart" style="left:90%;animation-duration:10s"></div>
+
+<div class="container">
+
+<!-- Page 1 -->
+
+<div id="page1" class="page active">
+
+<h1>I'm Sorry ❤️</h1>
+
+<p>
+
+I know I made mistakes.
+
+I never wanted to hurt you.
+
+You are truly special to me.
+
+Please forgive me and allow me
+
+to make things right.
+
+You mean everything to me.
+
+</p>
+
+<button onclick="next(2)">
+Sorry Accepted
+</button>
+
+</div>
+
+
+<!-- Page 2 -->
+
+<div id="page2" class="page">
+
+<h1>Thank You 🌸</h1>
+
+<p>
+
+Thank you for giving me another chance.
+
+Your kindness means a lot.
+
+I promise to cherish every moment.
+
+</p>
+
+<button onclick="next(3)">
+Welcome
+</button>
+
+</div>
+
+
+<!-- Page 3 -->
+
+<div id="page3" class="page">
+
+<h1>Will You Meet Me? 💕</h1>
+
+<div class="calendar" id="calendar"></div>
+
+</div>
+
+
+<!-- Page 4 -->
+
+<div id="page4" class="page">
+
+<h1>What Do You Want?</h1>
+
+<div class="options">
+
+<div class="choice"
+onclick="selectType('Flower 🌹')">
+
+🌹
+
+Flower
+
+</div>
+
+<div class="choice"
+onclick="selectType('Food 🍰')">
+
+🍰
+
+Food
+
+</div>
+
+<div class="choice"
+onclick="selectType('Others 🎁')">
+
+🎁
+
+Others
+
+</div>
+
+</div>
+
+<div id="box"></div>
+
+</div>
+
+
+<!-- Page 5 -->
+
+<div id="page5" class="page">
+
+<h1>Our Plan 💖</h1>
+
+<div class="result">
+
+<h2>📅 Meeting Date</h2>
+
+<p id="dateShow"></p>
+
+<h2>🎀 Choice</h2>
+
+<p id="choiceShow"></p>
+
+<h2>💌 Message</h2>
+
+<p id="messageShow"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+let selectedDate="";
+
+let selectedType="";
+
+function next(num){
+
+document
+.querySelector(".active")
+.classList.remove("active");
+
+document
+.getElementById("page"+num)
+.classList.add("active");
+
+}
+
+for(let i=1;i<=31;i++){
+
+document
+.getElementById("calendar")
+
+.innerHTML +=
+
+`<div class='date'
+
+onclick='pickDate(${i})'>
+
+${i}
+
+</div>`;
+
+}
+
+function pickDate(d){
+
+selectedDate=
+
+"July "+d;
+
+next(4);
+
+}
+
+function selectType(type){
+
+selectedType=type;
+
+document.getElementById(
+
+'box').innerHTML=
+
+`
+
+<textarea maxlength="50"
+
+id="msg"
+
+placeholder="Write something beautiful...">
+
+</textarea>
+
+<br>
+
+<button onclick="finish()">
+
+Done
+
+</button>
+
+`;
+
+}
+
+function finish(){
+
+document.getElementById(
+
+'dateShow')
+
+.innerHTML=
+
+selectedDate;
+
+document.getElementById(
+
+'choiceShow')
+
+.innerHTML=
+
+selectedType;
+
+document.getElementById(
+
+'messageShow')
+
+.innerHTML=
+
+document.getElementById(
+
+'msg').value;
+
+next(5);
+
+}
+
+</script>
+
+</body>
+
+</html>
